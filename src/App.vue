@@ -1,9 +1,9 @@
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AppMain from './components/AppMain.vue'
 
 export default {
     components: {
-        HelloWorld,
+        AppMain,
     }
 }
 </script>
@@ -21,7 +21,7 @@ export default {
                             <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
                         </a>
                     </div>
-                    <HelloWorld />
+                    <AppMain />
                 </div>
             </div>
         </div>
