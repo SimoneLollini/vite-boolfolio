@@ -1,9 +1,15 @@
 <script>
+import { store } from "../store.js";
 export default {
     name: "ProjectCard",
     props: {
         project: Object,
-    }
+    },
+    data() {
+        return {
+            store,
+        }
+    },
 }
 </script>
 
@@ -12,7 +18,7 @@ export default {
         <h3>
             {{ project.title }}
         </h3>
-
+        <img width="200" :src="store.getImagePath(project.image)" alt="">
         <div class="p-2">
             {{ project.description }}
         </div>

@@ -20,7 +20,7 @@ export default {
 </script>
 
 <template>
-    <div class="container">
+    <div class="container py-5">
         <div class="row" v-if="store.projects"> <!-- necessario per non creare errori in conosole -->
             <div v-for="project in store.projects.data" class="col">
                 <ProjectCard :project="project"></ProjectCard>
