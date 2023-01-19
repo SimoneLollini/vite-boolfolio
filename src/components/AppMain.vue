@@ -1,7 +1,11 @@
 <script>
 import axios from 'axios';
+import ProjectCard from '../components/ProjectCard.vue';
 export default {
     name: "AppMain",
+    components: {
+        ProjectCard,
+    },
     data() {
         return {
             projects: null,
@@ -35,11 +39,15 @@ export default {
 </script>
 
 <template>
-    <div v-if="projects"> <!-- necessario per non creare errori in conosole -->
-        <div v-for="project in projects.data">
-            {{ project.title }}
+    <div class="container">
+        <div class="row" v-if="projects"> <!-- necessario per non creare errori in conosole -->
+            <div v-for="project in projects.data" class="col">
+                <ProjectCard :project="project"></ProjectCard>
+            </div>
         </div>
+
     </div>
+
 </template>
 
 <style lang="scss" scoped>
