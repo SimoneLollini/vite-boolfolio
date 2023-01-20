@@ -43,9 +43,9 @@ export const store = reactive({
         return '/img/placeholder.png'
     },
     prevPage(url) {
-        store.callAxios(url)
+        this.getProjects(url)
     },
     nextPage(url) {
-        store.callAxios(url)
+        this.getProjects(url)
     }
 })

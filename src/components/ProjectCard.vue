@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-    <div class="card shadow-sm">
+    <div class="card shadow-sm h-100">
         <div class="top text-center py-3">
             <img class="img-fluid" :src="store.getImagePath(project.image)" alt="">
         </div>
@@ -31,7 +31,8 @@ export default {
             </div>
             <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                    <router-link :to="{ name: 'single-project', params: { slug: project.slug } }">View</router-link>
+                    <router-link :to="{ name: 'single-project', params: { slug: project.slug } }"
+                        class="btn btn-outline-secondary">View</router-link>
                 </div>
             </div>
         </div>
