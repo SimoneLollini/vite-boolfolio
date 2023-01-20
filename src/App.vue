@@ -1,6 +1,6 @@
 <script>
-import AppMain from './components/AppMain.vue'
-
+import AppMain from './components/AppMain.vue';
+import AppNav from './components/AppNav.vue';
 import { RouterView, RouterLink } from "vue-router";
 
 
@@ -9,7 +9,7 @@ export default {
     components: {
         AppMain,
         RouterView,
-        RouterLink
+        RouterLink,
     },
     data() {
         return {
@@ -21,7 +21,7 @@ export default {
 </script>
 
 <template>
-    <RouterView></RouterView>
+    <router-view></router-view>
 </template>
 <style lang="scss">
 @use './styles/general.scss';
