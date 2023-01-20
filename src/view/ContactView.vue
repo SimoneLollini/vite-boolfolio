@@ -10,5 +10,5 @@ export default {
 
 <template>
     <AppNav></AppNav>
-    <h2 class="text-red-500">CONTACT</h2>
+    <h2 class="">CONTACT</h2>
 </template>

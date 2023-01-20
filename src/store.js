@@ -3,6 +3,7 @@ import axios from 'axios'
 export const store = reactive({
 
     projects: '',
+    project: '',
     loading: true,
     base_api_url: 'http://127.0.0.1:8000',
     url: 'http://127.0.0.1:8000/api/projects',
@@ -18,6 +19,21 @@ export const store = reactive({
                 this.error = error.message
                 this.loading = false
             })
+    },
+    getProject(call) {
+        axios.get(call)
+            .then(response => {
+                if (response.data.success) {
+                    this.project = response.data.results
+                    this.loading = false
+                } else {
+
+                }
+                console.log(response);
+            }).catch(error => {
+                console.log(error)
+            })
+
     },
     getImagePath(path) {
 
