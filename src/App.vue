@@ -1,20 +1,12 @@
 <script>
-import AppMain from './components/AppMain.vue';
-import AppNav from './components/AppNav.vue';
 import { RouterView, RouterLink } from "vue-router";
 
 
 export default {
     name: 'App',
     components: {
-        AppMain,
         RouterView,
         RouterLink,
-    },
-    data() {
-        return {
-
-        }
     }
 }
 

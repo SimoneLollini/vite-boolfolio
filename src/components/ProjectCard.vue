@@ -14,27 +14,35 @@ export default {
 </script>
 
 <template>
-    <div class="card p-3">
-        <h3>
-            {{ project.title }}
-        </h3>
-        <img width="200" :src="store.getImagePath(project.image)" alt="">
-        <div class="p-2">
-            {{ project.description }}
+    <div class="card shadow-sm">
+        <div class="top text-center py-3">
+            <img class="img-fluid" :src="store.getImagePath(project.image)" alt="">
         </div>
-        <div class="p-2" v-if="project.technologies">
-            <h5>Technologies:</h5>
-            <span v-for="tech in project.technologies">
-                #{{ tech.name }}
-            </span>
-        </div>
-        <div class="p-2" v-if="project.type">
-            <h5>Type:</h5>
-            {{ project.type.name }}
+        <div class="card-body">
+            <h3>
+                {{ project.title }}
+            </h3>
+            <p class="card-text"> {{ project.description }}</p>
+            <div class="p-2">
+                <span v-for="tech in project.technologies">
+                    #{{ tech.name }}
+                </span>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                </div>
+            </div>
         </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
-
+img {
+    height: 200px;
+    max-width: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
 </style>
