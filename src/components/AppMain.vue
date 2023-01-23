@@ -20,7 +20,8 @@ export default {
 </script>
 
 <template>
-    <section class="py-5 text-center container">
+    <section class="py-5 text-center container position-relative">
+        <h1 class="position-absolute text-light top-50 start-50">Boolfolio Simo!</h1>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#273036" fill-opacity="0.8"
                 d="M0,160L40,165.3C80,171,160,181,240,197.3C320,213,400,235,480,208C560,181,640,107,720,112C800,117,880,203,960,234.7C1040,267,1120,245,1200,213.3C1280,181,1360,139,1400,117.3L1440,96L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
@@ -72,5 +73,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
+h1 {
+    transform: translate(-50%, -50%);
+}
 </style>
