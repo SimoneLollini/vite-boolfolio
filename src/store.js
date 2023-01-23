@@ -36,11 +36,10 @@ export const store = reactive({
 
     },
     getImagePath(path) {
-
         if (path) {
             return this.base_api_url + '/storage/' + path
         }
-        return '/img/placeholder.png'
+        return 'https://picsum.photos/200/300'
     },
     prevPage(url) {
         this.getProjects(url)
