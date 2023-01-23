@@ -8,22 +8,22 @@ const router = createRouter({
     routes: [
         {
             name: 'home',
-            component: HomeView,
+            component: () => import('./view/Homeview.vue'),
             path: '/',
         },
         {
             name: 'contact',
-            component: ContactView,
+            component: () => import('./view/ContactView.vue'),
             path: '/contact',
         }, {
             name: 'single-project',
-            component: SingleProject,
+            component: () => import('./view/SingleProject.vue'),
             path: '/project/:slug',
         },
         {
             path: '/:pathMatch(.*)*',
             name: 'not-found',
-            component: NotFoundView
+            component: import('./view/NoFoundView.vue'),
         },
     ]
 })

@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-    <div class="card shadow-sm h-100">
+    <div class="card shadow-sm">
         <div class="top text-center py-3">
             <img class="img-fluid" :src="store.getImagePath(project.image)" alt="">
         </div>
@@ -23,7 +23,6 @@ export default {
             <h3>
                 {{ project.title }}
             </h3>
-            <p class="card-text"> {{ project.description }}</p>
             <div class="p-2">
                 <span v-for="tech in project.technologies">
                     #{{ tech.name }}

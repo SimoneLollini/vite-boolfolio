@@ -38,7 +38,7 @@ export default {
     <div class="album py-5 bg-light">
         <div class="container">
             <div v-if="store.projects" class="row  row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                <div v-for="project in store.projects.data" class="col h-100">
+                <div v-for="project in store.projects.data" class="col">
                     <ProjectCard :project="project"></ProjectCard>
                 </div>
             </div>
@@ -55,7 +55,8 @@ export default {
                     </li>
                     <li class="page-item active" aria-current="page"><a class="page-link" href="#">{{
                         store.projects.current_page
-                    }}</a></li>
+                    }}</a>
+                    </li>
 
                     <li class="page-item" v-if="store.projects.next_page_url"
                         @click="store.nextPage(store.projects.next_page_url)">
