@@ -13,7 +13,6 @@ export default {
     },
     mounted() {
         const url = store.base_api_url + '/api/projects/' + this.$route.params.slug
-        console.log(url)
         store.getProject(url)
     }
 }

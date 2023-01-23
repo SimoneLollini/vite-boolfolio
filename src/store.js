@@ -27,7 +27,7 @@ export const store = reactive({
                     this.project = response.data.results
                     this.loading = false
                 } else {
-
+                    this.$router.replace({ name: 'not-found' })
                 }
                 console.log(response);
             }).catch(error => {
