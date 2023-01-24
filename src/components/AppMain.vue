@@ -1,10 +1,12 @@
 <script>
 import ProjectCard from '../components/ProjectCard.vue';
+import JumboCar from './JumboCar.vue';
 import { store } from "../store.js";
 export default {
     name: "AppMain",
     components: {
         ProjectCard,
+
     },
     data() {
         return {
@@ -33,7 +35,7 @@ export default {
             </path>
         </svg>
     </section>
-
+    <!-- <JumboCar></JumboCar> -->
     <div class="album py-5 bg-light">
         <div class="container">
             <div v-if="store.projects" class="row  row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -41,9 +43,6 @@ export default {
                     <ProjectCard :project="project"></ProjectCard>
                 </div>
             </div>
-
-
-
             <nav aria-label="Page navigation" class="d-flex justify-content-center pt-5">
                 <ul class="pagination">
                     <li class="page-item" v-if="store.projects.prev_page_url"
