@@ -5,6 +5,7 @@ export default {
     data() {
         return {
             store,
+            carouselArray: [],
             activeSlide: 0,
         }
     },
@@ -26,9 +27,16 @@ export default {
         },
         currentSlide(index) {
             this.activeSlide = index
+        },
+        fillArray(array, condition) {
+            let newArray = array.filter(condition);
+            return newArray;
         }
 
-    }
+    },
+    // mounted: {
+    //     fillArray(store.getProjects)
+    // }
 
 }
 </script>
