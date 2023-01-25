@@ -48,9 +48,7 @@ export default {
             <h1 class="text-light">CONTACT</h1>
             <div class="row h-100">
                 <div class="col-6">
-                    <div v-if="success" class="alert alert-success text-start" role="alert">
-                        Messaggio inviato con successo!
-                    </div>
+
 
                     <form @submit.prevent="sendForm()">
                         <div class="mb-3">
@@ -94,6 +92,11 @@ export default {
                 </div>
 
                 <div class="col-6 d-flex flex-column align-items-end justify-content-end position-relative">
+                    <div v-if="success"
+                        class="alert alert-success text-start position-absolute top-0 start-50 translate-middle w-100"
+                        role="alert">
+                        Messaggio inviato con successo!
+                    </div>
                     <div class="btn-wrapper mb-3">
                         <a href="https://github.com/SimoneLollini" class="btn btn-dark">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
